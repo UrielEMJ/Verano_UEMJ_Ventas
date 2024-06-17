@@ -7,12 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Layout\GenericList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.5" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Sales.Shared\Sales.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Layout\GenericList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Layout\GenericList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Layout\GenericList.razor" />
   </ItemGroup>
 
 </Project>
