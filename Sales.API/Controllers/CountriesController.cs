@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Sales.API.Data;
 using Sales.Shared.Entities;
 
@@ -15,7 +16,7 @@ namespace Sales.API.Controllers
             
             this._context = context;
         }
-
+        //Post
         [HttpPost]
         public async Task<ActionResult> PostAsync(Country country)
         {
@@ -23,6 +24,12 @@ namespace Sales.API.Controllers
 
             await _context.SaveChangesAsync();
             return Ok(country);
+        }
+        [HttpGet]
+        public async Task<ActionResult> GetAsync()
+        {
+            
+            return Ok(await _context.Countries.ToListAsync());
         }
     }
 }
