@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <Content Remove="Layout\GenericList.razor" />
+    <Content Remove="Pages\Countries\Body.razor" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CurrieTechnologies.Razor.SweetAlert2" Version="5.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.5" PrivateAssets="all" />
   </ItemGroup>
@@ -25,10 +27,16 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Layout\GenericList.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Countries\Body.razor" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Layout\GenericList.razor" />
+    <None Include="Pages\Countries\Body.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Countries\Body.razor" />
   </ItemGroup>
 
 </Project>
